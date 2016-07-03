@@ -3,7 +3,7 @@
 		先在html中创建你的承载banner的元素并规定其大小和位置
 		然后new Banner('#id名',图片数组['','',''等等],[可选]播放间隔,[可选]圆点大小)
 	   	如:
-	   	Banner('#banner',
+	   	new Banner('#banner',
 	   	['http://img3.duitang.com/uploads/item/201411/01/20141101114914_isMVf.thumb.224_0.jpeg',
 	   	'http://img3.duitang.com/uploads/item/201411/01/20141101114847_yR4ny.thumb.224_0.jpeg',
 	   	'http://img3.duitang.com/uploads/item/201411/01/20141101114816_eFBSj.thumb.224_0.jpeg',
