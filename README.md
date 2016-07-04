@@ -17,4 +17,4 @@
 在你的JS里加入new Banner
 
 
-如new Banner('#banner',[1.jpg,2.jpg,3.jpg],8000,20)//其中第三项和第四项为可选项，分别为滚动间隔时间，下面小点的大小;
+如new Banner('#banner',[1.jpeg,2.jpeg,3.jpeg],8000,20)//其中第三项和第四项为可选项，分别为滚动间隔时间，下面小点的大小;
