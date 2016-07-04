@@ -1,14 +1,3 @@
-/*
-	使用方法：
-		先在html中创建你的承载banner的元素并规定其大小和位置
-		然后new Banner('#id名',图片数组['','',''等等],[可选]播放间隔,[可选]圆点大小)
-	   	如:
-	   	new Banner('#banner',
-	   	['http://img3.duitang.com/uploads/item/201411/01/20141101114914_isMVf.thumb.224_0.jpeg',
-	   	'http://img3.duitang.com/uploads/item/201411/01/20141101114847_yR4ny.thumb.224_0.jpeg',
-	   	'http://img3.duitang.com/uploads/item/201411/01/20141101114816_eFBSj.thumb.224_0.jpeg',
-	   	'http://img3.duitang.com/uploads/item/201411/01/20141101114753_5M5sV.thumb.224_0.jpeg'])
-*/
 function Banner(ele,imgs,time,li){
 	this.oBanner = document.querySelector(ele);
 	this.width=this.oBanner.clientWidth;
@@ -71,6 +60,7 @@ Banner.prototype.bindEvent=function(){
 }
 Banner.prototype.animate=function(ele, start, target){
 	var timer = setInterval(function(){
+		console.log(a.count);
 			Math.abs(target - start) >= this.max * this.width ? (start = target) : target - start > 0 ? start += 80 : target - start < 0 ? start -= 80 : 0; //速度
 			ele.style.marginLeft = start + 'px';
 			if (start < target + 50 && start > target - 50) {
@@ -83,10 +73,6 @@ Banner.prototype.interval=function(){
 	var _this=this;
 	setInterval(function(){
 		_this.count--;
-		if(_this.count==-_this.max-1){
-			_this.ctrl.style.marginLeft=0;
-			_this.count=-1;
-		}
 		if(_this.count==-_this.max-2){
 			_this.ctrl.style.marginLeft=_this.width+'px';
 			_this.count=-2;
