@@ -73,7 +73,7 @@ Banner.prototype.interval=function(){
 	setInterval(function(){
 		_this.count--;
 		if(_this.count==-_this.max-2){
-			_this.ctrl.style.marginLeft=_this.width+'px';
+			_this.ctrl.style.marginLeft=-_this.width+'px';
 			_this.count=-2;
 		}
 		_this.animate(_this.ctrl,parseFloat(_this.ctrl.style.marginLeft), _this.count * _this.width);
