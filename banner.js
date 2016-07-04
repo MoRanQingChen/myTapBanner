@@ -1,4 +1,4 @@
-function Banner(ele,imgs,time,li){
+﻿function Banner(ele,imgs,time,li){
 	this.oBanner = document.querySelector(ele);
 	this.width=this.oBanner.clientWidth;
 	this.imgs=imgs;
@@ -60,7 +60,6 @@ Banner.prototype.bindEvent=function(){
 }
 Banner.prototype.animate=function(ele, start, target){
 	var timer = setInterval(function(){
-		console.log(a.count);
 			Math.abs(target - start) >= this.max * this.width ? (start = target) : target - start > 0 ? start += 80 : target - start < 0 ? start -= 80 : 0; //速度
 			ele.style.marginLeft = start + 'px';
 			if (start < target + 50 && start > target - 50) {
