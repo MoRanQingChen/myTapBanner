@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{
+	margin:0;padding:0;
+}
+#banner{
+	width: 900px;height: 500px;border:1px solid red;
+}
+#banner2{
+	width: 600px;height: 300px;border:1px solid red;
+}
+#banner3{
+	width: 1000px;height: 800px;border:1px solid red;
+}
+</style>
+<body>
+
+	自己确定好banner父元素的大小和位置，然后new Banner就自动生成组件了<br>
+	如new Banner('#banner',['1.jpeg','2.jpeg','3.jpeg'])  
+	<button onclick="javascript:new Banner('#banner',['1.jpeg','2.jpeg','3.jpeg']);this.disabled='true'">执行</button><br>
+	<br>
+	其中第三个第四个值是可选的，分别是间隔时间(默认10秒)和底部小圆点大小<br>
+	生成多个banner时不会互相干扰
+	<button onclick="javascript:new Banner('#banner2',['1.jpeg','2.jpeg','3.jpeg']);new Banner('#banner3',['1.jpeg','2.jpeg','3.jpeg']);this.disabled='true'">执行</button><br>
+	<div id="banner">#banner</div>
+	<div id="banner2">#banner2</div>
+	<div id="banner3">#banner3</div>
+	<script src="banner.js"></script>
+
+</body>
+</html>
